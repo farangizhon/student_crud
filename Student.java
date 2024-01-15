@@ -1,6 +1,4 @@
 public class Student {
     private final int id = counter++;
     private static int counter = 1;
-    private String name;
-    private int age;
 }
