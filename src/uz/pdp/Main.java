@@ -9,6 +9,10 @@ public class Main {
         System.out.println("Welcome");
         while (true) {
             StudentService.printAll();
+            System.out.println("""
+                    1 - add
+                    2 - delete
+                    3 - update""");
         }
     }
 }
