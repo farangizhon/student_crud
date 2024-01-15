@@ -29,5 +29,6 @@ public class StudentService {
                 Input.inputStr("Enter name"),
                 Input.inputInt("Enter age")
         );
+        STUDENT_REPO.save(student);
     }
 }
