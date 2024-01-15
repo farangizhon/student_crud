@@ -70,6 +70,6 @@ public class StudentRepo implements Repository<Student> {
 
     @Override
     public void delete(Student student) {
-
+        students.remove(student);
     }
 }
