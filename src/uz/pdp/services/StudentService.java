@@ -2,6 +2,7 @@ package uz.pdp.services;
 
 import uz.pdp.entity.Student;
 import uz.pdp.repos.StudentRepo;
+import uz.pdp.utils.Input;
 
 import java.util.List;
 import java.util.Optional;
@@ -22,5 +23,4 @@ public class StudentService {
             System.out.println(student);
         }
         System.out.println("----------------------");
-    }
 }
