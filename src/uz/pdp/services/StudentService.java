@@ -25,9 +25,10 @@ public class StudentService {
         System.out.println("----------------------");
     }
     public static void add() {
-        Student newStudent = new Student(
+        Student student = new Student(
                 Input.inputStr("Enter name"),
                 Input.inputInt("Enter age")
         );
+        STUDENT_REPO.save(student);
     }
 }
