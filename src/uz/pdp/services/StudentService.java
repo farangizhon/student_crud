@@ -42,4 +42,7 @@ public class StudentService {
         Optional<Student> studentOpt = findStudentById(id);
         return studentOpt.orElseThrow(() -> new RuntimeException("user not found"));
     }
+    public static void update() {
+        Student student = chooseStudent();
+    }
 }
