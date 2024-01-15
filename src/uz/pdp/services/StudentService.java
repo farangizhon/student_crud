@@ -31,4 +31,15 @@ public class StudentService {
         );
         STUDENT_REPO.save(student);
     }
+    public static void delete() {
+        Student student = chooseStudent();
+        STUDENT_REPO.delete(student);
+    }
+
+    private static Student chooseStudent() {
+        printAll();
+        int id = Input.inputInt("Choose by id");
+        Optional<Student> studentOpt = findStudentById(id);
+        return studentOpt.orElseThrow(() -> new RuntimeException("user not found"));
+    }
 }
