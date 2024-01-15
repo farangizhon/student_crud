@@ -44,5 +44,9 @@ public class StudentService {
     }
     public static void update() {
         Student student = chooseStudent();
+        STUDENT_REPO.update(new Student(
+                Input.inputStr("Enter name"),
+                Input.inputInt("Enter age")
+        ), student.getId());
     }
 }
