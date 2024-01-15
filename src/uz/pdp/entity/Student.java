@@ -1,6 +1,8 @@
 package uz.pdp.entity;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable {
     private final int id = counter++;
     private static int counter = 1;
     private String name;
