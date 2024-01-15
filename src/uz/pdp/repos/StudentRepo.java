@@ -6,6 +6,7 @@ import uz.pdp.entity.Student;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class StudentRepo implements Repository<Student> {
     List<Student> students;
@@ -56,7 +57,7 @@ public class StudentRepo implements Repository<Student> {
 
     @Override
     public void update(Student student, Integer id) {
-
+        Optional<Student> studentOpt = uz.pdp.services.StudentService.findStudentById(id);
     }
 
     @Override
