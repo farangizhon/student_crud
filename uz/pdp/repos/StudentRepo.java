@@ -38,7 +38,7 @@ public class StudentRepo implements Repository<Student> {
 
     @Override
     public void save(Student student) {
-
+        students.add(student);
     }
 
     @Override
