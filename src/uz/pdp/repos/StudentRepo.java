@@ -58,6 +58,14 @@ public class StudentRepo implements Repository<Student> {
     @Override
     public void update(Student student, Integer id) {
         Optional<Student> studentOpt = uz.pdp.services.StudentService.findStudentById(id);
+        if (studentOpt.isPresent()) {
+            Student foundStudent = studentOpt.get();
+            foundStudent.setName(student.getName());
+            foundStudent.setAge(student.getAge());
+            uploadData();
+        } else {
+            System.out.println("No user found under such id");
+        }
     }
 
     @Override
