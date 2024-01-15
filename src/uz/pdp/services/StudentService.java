@@ -17,4 +17,10 @@ public class StudentService {
         }
         return Optional.empty();
     }
+    public static void printAll() {
+        for (Student student : STUDENT_REPO.findAll()) {
+            System.out.println(student);
+        }
+        System.out.println("----------------------");
+    }
 }
