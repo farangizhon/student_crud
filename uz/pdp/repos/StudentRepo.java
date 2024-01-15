@@ -3,7 +3,10 @@ package uz.pdp.repos;
 import uz.pdp.db.Repository;
 import uz.pdp.entity.Student;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,13 +39,6 @@ public class StudentRepo implements Repository<Student> {
     @Override
     public void save(Student student) {
         students.add(student);
-        try (OutputStream outputStream = new FileOutputStream(PATH);
-             ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);)
-        {
-            objectOutputStream.writeObject(students);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     @Override
