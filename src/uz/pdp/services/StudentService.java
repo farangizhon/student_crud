@@ -23,4 +23,11 @@ public class StudentService {
             System.out.println(student);
         }
         System.out.println("----------------------");
+    }
+    public static void add() {
+        Student student = new Student(
+                Input.inputStr("Enter name"),
+                Input.inputInt("Enter age")
+        );
+    }
 }
